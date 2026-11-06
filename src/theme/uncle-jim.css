@@ -1,0 +1,131 @@
+/* Uncle Jim Money — wallet theme override for shocknet/wallet2 (AGPL-3.0 fork).
+   Import AFTER src/theme/variables.css. Replaces the SHOCK blue/sky palette
+   (#29abe2, #0F4C81, #7b3fe4) with the Uncle Jim coral/amber/gold tokens.
+   Shade/tint values follow Ionic's own darkening/lightening convention. */
+
+:root {
+  --ion-color-primary: #F4706C;
+  --ion-color-primary-rgb: 244,112,108;
+  --ion-color-primary-contrast: #FFFFFF;
+  --ion-color-primary-contrast-rgb: 255,255,255;
+  --ion-color-primary-shade: #D6625F;
+  --ion-color-primary-tint: #F5817D;
+  --ion-color-secondary: #EAA156;
+  --ion-color-secondary-rgb: 234,161,86;
+  --ion-color-secondary-contrast: #0D0D1A;
+  --ion-color-secondary-contrast-rgb: 13,13,26;
+  --ion-color-secondary-shade: #CD8D4B;
+  --ion-color-secondary-tint: #ECAC6A;
+  --ion-color-tertiary: #F5BB45;
+  --ion-color-tertiary-rgb: 245,187,69;
+  --ion-color-tertiary-contrast: #0D0D1A;
+  --ion-color-tertiary-contrast-rgb: 13,13,26;
+  --ion-color-tertiary-shade: #D7A43C;
+  --ion-color-tertiary-tint: #F6C35B;
+  --ion-color-success: #1DBF73;
+  --ion-color-success-rgb: 29,191,115;
+  --ion-color-success-contrast: #0D0D1A;
+  --ion-color-success-contrast-rgb: 13,13,26;
+  --ion-color-success-shade: #19A865;
+  --ion-color-success-tint: #38C683;
+  --ion-color-warning: #F5BB45;
+  --ion-color-warning-rgb: 245,187,69;
+  --ion-color-warning-contrast: #0D0D1A;
+  --ion-color-warning-contrast-rgb: 13,13,26;
+  --ion-color-warning-shade: #D7A43C;
+  --ion-color-warning-tint: #F6C35B;
+  --ion-color-danger: #B3261E;
+  --ion-color-danger-rgb: 179,38,30;
+  --ion-color-danger-contrast: #FFFFFF;
+  --ion-color-danger-contrast-rgb: 255,255,255;
+  --ion-color-danger-shade: #9D211A;
+  --ion-color-danger-tint: #BC4039;
+  --ion-color-medium: #8A8390;
+  --ion-color-medium-rgb: 138,131,144;
+  --ion-color-medium-contrast: #FFFFFF;
+  --ion-color-medium-contrast-rgb: 255,255,255;
+  --ion-color-medium-shade: #79737E;
+  --ion-color-medium-tint: #98919D;
+  --ion-color-light: #FAF7F5;
+  --ion-color-light-rgb: 250,247,245;
+  --ion-color-light-contrast: #0D0D1A;
+  --ion-color-light-contrast-rgb: 13,13,26;
+  --ion-color-light-shade: #DCD9D7;
+  --ion-color-light-tint: #FAF7F6;
+  --ion-background-color: #FFFFFF;
+  --ion-background-color-rgb: 255,255,255;
+  --ion-text-color: #0D0D1A;
+  --ion-text-color-rgb: 13,13,26;
+  --ion-card-background: #FFFFFF;
+  --ion-toolbar-background: #FFFFFF;
+  --ion-tab-bar-background: #FFFFFF;
+  --ion-item-background: #FFFFFF;
+  --ion-border-color: #EFE7E4;
+  --ion-card-border-radius: 24px;
+}
+
+:root.dark, .ios body.dark, .md body.dark {
+  --ion-color-primary: #F5918E;
+  --ion-color-primary-rgb: 245,145,142;
+  --ion-color-primary-contrast: #0D0D1A;
+  --ion-color-primary-contrast-rgb: 13,13,26;
+  --ion-color-primary-shade: #D77F7C;
+  --ion-color-primary-tint: #F69E9B;
+  --ion-color-secondary: #EAA156;
+  --ion-color-secondary-rgb: 234,161,86;
+  --ion-color-secondary-contrast: #0D0D1A;
+  --ion-color-secondary-contrast-rgb: 13,13,26;
+  --ion-color-secondary-shade: #CD8D4B;
+  --ion-color-secondary-tint: #ECAC6A;
+  --ion-color-tertiary: #F5BB45;
+  --ion-color-tertiary-rgb: 245,187,69;
+  --ion-color-tertiary-contrast: #0D0D1A;
+  --ion-color-tertiary-contrast-rgb: 13,13,26;
+  --ion-color-tertiary-shade: #D7A43C;
+  --ion-color-tertiary-tint: #F6C35B;
+  --ion-color-success: #35C785;
+  --ion-color-success-rgb: 53,199,133;
+  --ion-color-success-contrast: #0D0D1A;
+  --ion-color-success-contrast-rgb: 13,13,26;
+  --ion-color-success-shade: #2EAF75;
+  --ion-color-success-tint: #4DCD93;
+  --ion-color-warning: #F5BB45;
+  --ion-color-warning-rgb: 245,187,69;
+  --ion-color-warning-contrast: #0D0D1A;
+  --ion-color-warning-contrast-rgb: 13,13,26;
+  --ion-color-warning-shade: #D7A43C;
+  --ion-color-warning-tint: #F6C35B;
+  --ion-color-danger: #F28B82;
+  --ion-color-danger-rgb: 242,139,130;
+  --ion-color-danger-contrast: #0D0D1A;
+  --ion-color-danger-contrast-rgb: 13,13,26;
+  --ion-color-danger-shade: #D47A72;
+  --ion-color-danger-tint: #F39891;
+  --ion-color-medium: #7D7689;
+  --ion-color-medium-rgb: 125,118,137;
+  --ion-color-medium-contrast: #FFFFFF;
+  --ion-color-medium-contrast-rgb: 255,255,255;
+  --ion-color-medium-shade: #6E6778;
+  --ion-color-medium-tint: #8C8697;
+  --ion-color-light: #1A1726;
+  --ion-color-light-rgb: 26,23,38;
+  --ion-color-light-contrast: #FFFFFF;
+  --ion-color-light-contrast-rgb: 255,255,255;
+  --ion-color-light-shade: #161421;
+  --ion-color-light-tint: #353240;
+  --ion-background-color: #0D0D1A;
+  --ion-background-color-rgb: 13,13,26;
+  --ion-text-color: #F4F1F8;
+  --ion-text-color-rgb: 244,241,248;
+  --ion-card-background: #16131F;
+  --ion-toolbar-background: #0D0D1A;
+  --ion-tab-bar-background: #0D0D1A;
+  --ion-item-background: #16131F;
+  --ion-border-color: #2A2536;
+}
+
+/* Brand chrome */
+:root { --uj-ink:#0D0D1A; --uj-coral:#F4706C; --uj-amber:#EAA156; --uj-gold:#F5BB45 }
+ion-toolbar { --background: transparent; --color: var(--ion-text-color) }
+ion-button { font-weight: 700; letter-spacing: -.01em }
+ion-card { box-shadow: 0 8px 24px rgba(13,13,26,.08) }

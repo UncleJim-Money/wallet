@@ -2,8 +2,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-	appId: 'app.shockwallet.my',
-	appName: 'SHOCKWALLET',
+	appId: 'money.unclejim.app',
+	appName: 'Uncle Jim',
 	webDir: 'dist',
 	server: {
 		androidScheme: 'https',
@@ -31,7 +31,7 @@ const config: CapacitorConfig = {
 		},
 		LocalNotifications: {
 			smallIcon: "ic_notification",
-			iconColor: "#29abe2",
+			iconColor: "#F4706C",
 		},
 		PushNotifications: {
 			presentationOptions: ["badge", "sound", "alert"]

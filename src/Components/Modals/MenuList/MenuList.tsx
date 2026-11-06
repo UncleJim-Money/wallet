@@ -33,7 +33,7 @@ export const StyledModal = styled.div`
   top: 10vh;
   right: 3px;
 >>>>>>> 24401f6d2edd19a588162aa3edd9e5eb67e9c7a1
-  border: 1px solid #29abe2;
+  border: 1px solid #F4706C;
   font-family: Montserrat;
   padding: 25px 10px 0px 10px;
   text-align: right;

@@ -51,12 +51,12 @@
             width: 100%;
             font-family: Montserrat;
             font-size: 16px;
-            text-decoration: none solid rgb(41, 171, 226);
+            text-decoration: none solid rgb(244,112,108);
             text-align: center;
             text-shadow: 0px 0px 2px rgba(0,0,0,1);
             display: inline-flex;
             &_top {
-                color: #29abe2;
+                color: #F4706C;
             }
 
             &_bottom {
@@ -81,7 +81,7 @@
         }
 
         &_settings {
-            border-top: 1px solid #29abe2;
+            border-top: 1px solid #F4706C;
             margin-top: 20px;
         }
     }
@@ -152,7 +152,7 @@
             width: 97px;
             height: 43px;
             padding: 0px 8px;
-            border: 1px solid #29abe2;
+            border: 1px solid #F4706C;
             border-radius: 5px;
             font-family: Montserrat;
             font-size: 14px;

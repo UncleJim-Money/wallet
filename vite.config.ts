@@ -35,7 +35,7 @@ export default defineConfig({
 				name: 'Shockwallet',
 				short_name: 'App',
 				description: 'Lightning for Everyone',
-				theme_color: '#29abe2',
+				theme_color: '#F4706C',
 				background_color: '#16191c',
 				icons: [
 					{

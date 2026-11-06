@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Uncle Jim Money">
+<rect width="64" height="64" rx="14" fill="#F4706F"/>
+<circle cx="23" cy="28" r="11" fill="#F5BB45"/><circle cx="43" cy="28" r="11" fill="#F5BB45"/>
+<rect x="31" y="26" width="4" height="4" fill="#F5BB45"/>
+<path d="M23 22v12M43 22v12" stroke="#0D0D1A" stroke-width="4" stroke-linecap="round"/>
+<path d="M12 20h6M46 20h6" stroke="#0D0D1A" stroke-width="3" stroke-linecap="round"/>
+</svg>

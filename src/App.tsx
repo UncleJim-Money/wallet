@@ -16,6 +16,7 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 import "./theme/tailwind.css";
 import "./theme/variables.css";
+import "./theme/uncle-jim.css";
 
 import { Redirect, Route } from "react-router-dom";
 import React, { lazy, Suspense, useEffect, useRef, useState } from "react";

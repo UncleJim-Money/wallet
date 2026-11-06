@@ -31,7 +31,7 @@ export const Backdrop = styled.div`
 export const StyledModal = styled.div`
   width: 90%;
   max-width: 600px;
-  border: 1px solid #29abe2;
+  border: 1px solid #F4706C;
   font-family: Montserrat;
   padding: 25px 20px 25px 20px;
   text-align: center;

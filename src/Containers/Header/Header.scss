@@ -33,7 +33,7 @@
     }
 
     &_Setting svg, &_SourceIcon svg{
-      fill: rgb(41, 171, 226);
+      fill: rgb(244,112,108);
       filter: drop-shadow(0px 0px 1px rgba(0,0,0,1));
     }
 
@@ -204,11 +204,11 @@
 
     &_item:hover{
       .Header_modal_content_item_img>div>svg path{
-        fill: #29abe2 !important;
+        fill: #F4706C !important;
       }
 
       .Header_modal_content_item_text{
-        color: #29abe2;
+        color: #F4706C;
       }
     }
   }

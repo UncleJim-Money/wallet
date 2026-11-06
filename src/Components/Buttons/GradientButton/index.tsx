@@ -13,7 +13,7 @@ const GradientButton = ({ children, ...props }: GradientButtonProps & React.Comp
 			className={styles["button"]}
 			fill="clear"
 			style={{
-				'--gradient-start': '#29ABE2',
+				'--gradient-start': '#F4706C',
 				'--gradient-end': '#B0B0B0',
 				'--border-width': '2px'
 			}}

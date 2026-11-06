@@ -65,7 +65,7 @@ const styles = `
 .Contacts_content_title {
   font-size: 23px;
   font-weight: bold;
-  color: #29abe2;
+  color: #F4706C;
   width: 100%;
   text-align: center;
 }
