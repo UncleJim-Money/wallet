@@ -1,3 +1,4 @@
+import { SUPPORT_URL } from "../../constants"
 import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import { useIonRouter, isPlatform, IonMenuButton } from "@ionic/react";
@@ -6,7 +7,7 @@ import { UseModal } from "../../Hooks/UseModal";
 
 //It import svg icons library
 import * as Icons from "../../Assets/SvgIconLibrary";
-import SWText from "../../Assets/Images/wallet_new_text.png";
+import UJText from "../../Assets/Images/uj-text.png";
 import { MenuList } from "../../Components/Modals/MenuList";
 import { useSelector } from "../../State/store/store";
 import { Modal } from "../../Components/Modals/Modal";
@@ -142,7 +143,7 @@ export const Header = () => {
 						{Icons.Logo()}
 					</button>
 					<div className="Header_text">
-						<img src={SWText} width="330px" alt="" />
+						<img src={UJText} width="185px" alt="Uncle Jim" />
 					</div>
 				</React.Fragment>
 			) : (
@@ -334,12 +335,12 @@ export const PubHeader = () => {
 					if (debugMode) {
 						toggleDebugShown()
 					} else {
-						window.open('https://docs.shock.network/', '_blank');
+						window.open(SUPPORT_URL, '_blank');
 						toggle();
 					}
 				}}>
 					<div className="Header_modal_content_item_img" onClick={() => {
-						window.location.href = 'https://docs.shock.network/';
+						window.location.href = SUPPORT_URL;
 					}}>
 						{Icons.HelpAbout()}
 					</div>
@@ -352,7 +353,7 @@ export const PubHeader = () => {
 	return (
 		<div className="Header pub_header">
 			<button className="Header_logo_2" onClick={() => setLogoClickCounter(prev => prev + 1)}>
-				<img src="/pub_logo.png" width={147} height={26} alt="logo" />
+				<img src="/uj-wordmark.png" width={137} height={26} alt="Uncle Jim" />
 			</button>
 			<button className="Header_menu" onClick={() => {
 				router.push("#");

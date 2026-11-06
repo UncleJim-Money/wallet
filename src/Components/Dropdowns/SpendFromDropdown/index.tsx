@@ -1,7 +1,7 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import * as icons from "../../../Assets/SvgIconLibrary";
 import { SpendFrom } from '../../../globalTypes';
-import BootstrapSource from "../../../Assets/Images/bootstrap_source.jpg";
+import BootstrapSource from "../../../Assets/Images/uj-mark.png";
 import { sourceDisplayName } from "@/Components/Source/sourceDisplayName";
 import { NprofileView } from '@/State/scoped/backups/sources/selectors';
 

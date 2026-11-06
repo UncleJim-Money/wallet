@@ -32,38 +32,38 @@ export default defineConfig({
 				globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
 			},
 			manifest: {
-				name: 'Shockwallet',
-				short_name: 'App',
-				description: 'Lightning for Everyone',
+				name: 'Uncle Jim',
+				short_name: 'Uncle Jim',
+				description: 'Bitcoin that behaves like money. Instant Lightning payments, run by Uncle Jim.',
 				theme_color: '#F4706C',
-				background_color: '#16191c',
+				background_color: '#0D0D1A',
 				icons: [
 					{
-						src: 'pwa-64x64.png',
+						src: 'uj-pwa-64.png',
 						sizes: '64x64',
 						type: 'image/png',
 						purpose: 'any'
 					},
 					{
-						src: 'pwa-192x192.png',
+						src: 'uj-pwa-192.png',
 						sizes: '192x192',
 						type: 'image/png',
 						purpose: 'any'
 					},
 					{
-						src: 'pwa-512x512.png',
+						src: 'uj-pwa-512.png',
 						sizes: '512x512',
 						type: 'image/png',
 						purpose: 'any'
 					},
 					{
-						src: '/pwa-maskable-192x192.png',
+						src: '/uj-maskable-192.png',
 						sizes: '192x192',
 						type: 'image/png',
 						purpose: 'maskable'
 					},
 					{
-						src: '/pwa-maskable-512x512.png',
+						src: '/uj-maskable-512.png',
 						sizes: '512x512',
 						type: 'image/png',
 						purpose: 'maskable'

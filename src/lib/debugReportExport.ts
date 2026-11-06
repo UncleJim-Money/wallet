@@ -17,7 +17,7 @@ export async function exportDebugReport() {
 function makeFilename() {
 	// ISO has `:` which is illegal in Windows filenames, so sanitize
 	const iso = new Date().toISOString().replace(/[:]/g, '-');
-	return `shockwallet-debug-${iso}.json`;
+	return `uncle-jim-debug-${iso}.json`;
 }
 
 async function exportNative(json: string, filename: string) {
@@ -31,7 +31,7 @@ async function exportNative(json: string, filename: string) {
 
 
 	await Share.share({
-		title: 'Shockwallet debug report',
+		title: 'Uncle Jim debug report',
 		text: 'Attach this file when contacting support.',
 		url: uri,
 		dialogTitle: 'Share debug report',

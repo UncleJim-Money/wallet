@@ -13,18 +13,18 @@ const config: CapacitorConfig = {
 	},
 	plugins: {
 		App: {
-			iosScheme: "shockwallet",
-			androidScheme: "shockwallet"
+			iosScheme: "unclejim",
+			androidScheme: "unclejim"
 		},
 		BarcodeScanning: {
 			photoLibraryUsageDescription: "To scan QR codes using the camera"
 		},
 		StatusBar: {
 			overlaysWebView: false,
-			backgroundColor: '#16191c',
+			backgroundColor: '#0D0D1A',
 		},
 		SplashScreen: {
-			backgroundColor: "#16191c",
+			backgroundColor: "#0D0D1A",
 			androidScaleType: "CENTER_CROP",
 			launchAutoHide: true,
 			splashFullScreen: true,
@@ -40,7 +40,7 @@ const config: CapacitorConfig = {
 			enabled: true
 		},
 		"EdgeToEdge": {
-			"backgroundColor": "#16191c"
+			"backgroundColor": "#0D0D1A"
 		}
 	}
 };

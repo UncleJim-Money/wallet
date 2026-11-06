@@ -60,7 +60,7 @@ export const useWatchClipboard = () => {
 			if (err?.name === "NotAllowedError" && !warned) {
 				showAlert({
 					header: "Clipboard Permission Denided",
-					message: "Shockwallet reads your clipboard to prompt you to use data on your clipboard",
+					message: "Uncle Jim reads your clipboard to prompt you to use data on your clipboard",
 					onDidPresent: () => updateWraned(true)
 				});
 			}

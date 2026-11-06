@@ -26,7 +26,11 @@ export const decodeNoffer = (data: string) => {
 export const locationRegex = new RegExp(/\w{1,}/g)
 
 export const keylinkAppId = import.meta.env.VITE_KEYLINK_APP_ID || ""
-export const WALLET_URL = import.meta.env.WALLET_URL || "https://my.shockwallet.app"
+export const SITE_URL = import.meta.env.VITE_SITE_URL || "https://unclejim.money";
+export const TERMS_URL = `${SITE_URL}/terms/`;
+export const PRIVACY_URL = `${SITE_URL}/privacy/`;
+export const SUPPORT_URL = `${SITE_URL}/support/`;
+export const WALLET_URL = import.meta.env.WALLET_URL || "https://app.unclejim.money"
 export const DEVICE_ID_STORAGE_KEY = "DEVICE_ID"
 export const HTTP_ADMIN_TOKEN_STORAGE_KEY = "HTTP_ADMIN_TOKEN"
 export const HTTP_AUTH_TOKEN_STORAGE_KEY = "HTTP_AUTH_TOKEN"
@@ -37,7 +41,7 @@ export const NOSTR_PUBLIC_KEY_STORAGE_KEY = "NOSTR_PUBLIC_KEY"
 export const NOSTR_RELAYS = import.meta.env.VITE_NOSTR_RELAYS ? [import.meta.env.VITE_NOSTR_RELAYS] : ["wss://relay.lightning.pub"]
 export const OLD_NOSTR_PUB_DESTINATION = "e306c45ee0a7c772540f1dc88b00f79d2d3910bfd4047e910584998de9c9e2be";
 export const NOSTR_PUB_DESTINATION = import.meta.env.VITE_NOSTR_PUB_DESTINATION || "76ed45f00cea7bac59d8d0b7d204848f5319d7b96c140ffb6fcbaaab0a13d44e";
-export const DEFAULT_BRIDGE_URL = import.meta.env.VITE_DEFAULT_BRIDGE_URL || "https://shockwallet.app";
+export const DEFAULT_BRIDGE_URL = import.meta.env.VITE_DEFAULT_BRIDGE_URL || SITE_URL;
 export const defaultMempool = "https://mempool.space/api/v1/fees/recommended";
 export const SANCTUM_URL = import.meta.env.VITE_SANCTUM_URL || "https://test-auth.shock.network"
 export const TIMESTAMP_STORAGE_KEY = "BACKUP_TIMESTAMP";

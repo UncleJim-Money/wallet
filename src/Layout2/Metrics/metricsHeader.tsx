@@ -1,6 +1,6 @@
 
 import { IonButton, IonButtons, IonHeader, IonImg, IonTitle, IonToolbar } from '@ionic/react';
-import logo from "@/Assets/Images/bootstrap_source.jpg";
+import logo from "@/Assets/Images/uj-mark.png";
 
 
 const MetricsHeader = ({ children }: { children?: React.ReactNode }) => {

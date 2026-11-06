@@ -1,5 +1,5 @@
 import React from "react";
-import BootstrapSource from "./Assets/Images/bootstrap_source.jpg";
+import BootstrapSource from "./Assets/Images/uj-mark.png";
 import * as icons from "./Assets/SvgIconLibrary";
 
 export const arrangeIcon = (value?: string) => {

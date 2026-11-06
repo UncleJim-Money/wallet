@@ -26,28 +26,58 @@ upstream merge:
 | rgb triplets `41,171,226` / `15,76,129` / `123,63,228` | `244,112,108` / `13,13,26` / `245,187,69` | alpha composites |
 
 Files touched: `index.html`, `vite.config.ts`, `capacitor.config.ts`,
-`public/favicon.svg`, `public/shockwallet-logo.svg`, `src/Assets/SvgIconLibrary.tsx`,
+`src/Assets/SvgIconLibrary.tsx`,
 `src/styles/_buttons.module.scss`, `src/Containers/Header/Header.scss`,
 `src/Components/Buttons/GradientButton`, `src/Components/Modals/{Modal,MenuList,EditSourceModal}`,
 `src/Pages/{Contacts,Send,Prefs,Offers,Automation,Invitations,LinkedApp,Metrics}`.
 
-### 3. Identity
-- `capacitor.config.ts` → appId `money.unclejim.app`, appName `Uncle Jim`
-- `index.html` → title, description, mask-icon → `/uncle-jim-logo.svg`
+### 3. Brand artwork (additive — new files only)
+
+Upstream's brand is **rasterised**, so no text search finds it. The visible
+SHOCKWALLET wordmark and the blue bolt live in PNG/JPG files:
+
+| Upstream asset | Where it shows | Replaced by |
+|---|---|---|
+| `src/Assets/Images/isolated logo.png` | `Icons.Logo()`, HomeHeader, Metrics header, CreateIdentity hero, source avatars | `src/Assets/Images/uj-mark.png` |
+| `src/Assets/Images/wallet_new_text.png` | Header lockup, CreateIdentity hero | `src/Assets/Images/uj-text.png` |
+| `src/Assets/Images/bootstrap_source.jpg` | Lightning.Pub source avatar | `src/Assets/Images/uj-mark.png` |
+| `public/pub_logo.png` | `pub_header` wordmark | `public/uj-wordmark.png` |
+| `public/pwa-*.png`, `apple-touch-icon.png`, `favicon.*` | install/PWA/favicon | `public/uj-*.png` |
+
+The originals are left in the tree, unreferenced, so upstream merges stay clean.
+Regenerate everything with `../scripts/make-app-assets.sh` (needs ImageMagick +
+Chrome; Chrome is used because ImageMagick's internal MSVG drops stroke geometry).
+
+`public/.well-known/` is **deleted**. It declared SHOCK's iOS app ID and Android
+package + signing fingerprints as handlers for links on our origin — serving it
+would let the real Shockwallet app claim deep links from `app.unclejim.money`.
+
+### 4. Identity
+- `capacitor.config.ts` → appId `money.unclejim.app`, appName `Uncle Jim`,
+  deep-link scheme `unclejim://`, splash/status/edge background `#0D0D1A`
+- `index.html` → title, description, `apple-mobile-web-app-title`, favicon set
+- `vite.config.ts` → PWA manifest `name`/`short_name` = "Uncle Jim", icons → `uj-*`
 - `package.json` → name `uncle-jim-app`
-- `public/uncle-jim-logo.svg` → our glasses mark (from `brand/logos/favicon.svg`)
 
 ## Still to do before this is shippable
 
-1. **29 files still say SHOCKWALLET / ShockWallet in UI strings.** Not swept
-   automatically on purpose — bulk string replacement in `.tsx` also hits imports,
-   route names and URLs. Do this by hand, screen by screen, with the app open.
+1. **Screen-by-screen visual QA.** The brand rasters are swapped and the three
+   user-visible "Shockwallet" strings (clipboard permission alert, debug report
+   title + filename) are reworded, but only `/identity/create` has actually been
+   looked at. The rest needs a funded source attached.
+
+   Deliberately **not** changed: `__shockwallet_lai_`, `_shockwallet`,
+   `doc/shockwallet/identity_`, `shockwallet:prefs` and friends. They are storage
+   keys and Nostr `d`-tags — renaming them silently orphans every existing user's
+   local data and produces no visible brand benefit.
+   `src/Components/NavigationMenu/index.tsx:104` still says "Shockwallet" but sits
+   inside a commented-out block.
 2. **External service dependencies** — decide each, do not blindly rewrite:
 
    | Reference | What it does | Your call |
    |---|---|---|
    | `rates.shockwallet.app/v2/prices/` | BTC price feed for display | keep as a dependency, or run your own rates endpoint |
-   | `docs.shock.network` (+ `/terms/`, `/pub/intro`) | help + legal links | must become your own docs/terms — do not send Uncle Jim's customers to SHOCK's terms |
+   | ~~`docs.shock.network`~~ | help + legal links | **done** — now `unclejim.money/terms`, `/privacy`, `/support` via `src/constants.ts` |
    | `shockwallet.app`, `my.shockwallet.app` | canonical/share URLs | → `app.unclejim.money` |
    | `cdn.shockwallet.app/card2.png` | one image asset | self-host or replace |
    | `test-auth.shock.network` / `VITE_SANCTUM_URL` | Sanctum remote signer | only if you adopt remote signing; otherwise leave default |

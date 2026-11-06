@@ -1,3 +1,4 @@
+import { SUPPORT_URL } from "../../constants"
 import {
 	IonContent,
 	IonIcon,
@@ -127,7 +128,7 @@ const Inner = () => {
 							<IonIcon style={{ color: "orange" }} icon={logoBitcoin} slot="start" />
 							<IonLabel>Buy Bitcoin</IonLabel>
 						</IonItem>
-						<IonItem href="https://docs.shock.network/" target="_blank" button>
+						<IonItem href={SUPPORT_URL} target="_blank" button>
 							<IonIcon color="success" icon={helpCircleOutline} slot="start" />
 							<IonLabel>Help/About</IonLabel>
 						</IonItem>

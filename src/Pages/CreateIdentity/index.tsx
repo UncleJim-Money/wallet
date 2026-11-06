@@ -1,3 +1,4 @@
+import { TERMS_URL, PRIVACY_URL } from "../../constants"
 import {
 	IonButton,
 	IonButtons,
@@ -17,8 +18,8 @@ import {
 	IonToolbar,
 } from '@ionic/react';
 
-import logo from "@/Assets/Images/isolated logo.png";
-import shockwalletText from "@/Assets/Images/wallet_new_text.png";
+import logo from "@/Assets/Images/uj-mark.png";
+import uncleJimText from "@/Assets/Images/uj-text.png";
 import { cloudOutline, keyOutline } from 'ionicons/icons';
 
 import { useAppSelector } from '@/State/store/hooks';
@@ -92,7 +93,7 @@ const CreateIdentityPage = () => {
 								}}
 							>
 								<IonImg
-									src={shockwalletText}
+									src={uncleJimText}
 									style={{
 										display: "block",
 										width: "100%",
@@ -191,14 +192,22 @@ const CreateIdentityPage = () => {
 							By proceeding you acknowledge that this is bleeding-edge software,
 							and agree to the providers{" "}
 							<a
-								href="https://docs.shock.network/terms/"
+								href={TERMS_URL}
 								target="_blank"
 								rel="noreferrer"
 								className="underline text-high"
 							>
 								terms
 							</a>{" "}
-							regarding any services herein.
+							regarding any services herein, and to how your data is handled — see{" "}
+							<a
+								href={PRIVACY_URL}
+								target="_blank"
+								rel="noreferrer"
+								className="underline text-high"
+							>
+								privacy
+							</a>.
 						</section>
 
 					</div>

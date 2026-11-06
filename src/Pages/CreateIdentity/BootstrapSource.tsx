@@ -1,3 +1,4 @@
+import { TERMS_URL, PRIVACY_URL } from "../../constants"
 import {
 	IonPage,
 	IonContent,
@@ -227,14 +228,22 @@ const BootstrapSource = () => {
 							By proceeding you acknowledge that this is bleeding-edge software,
 							and agree to the providers{" "}
 							<a
-								href="https://docs.shock.network/terms/"
+								href={TERMS_URL}
 								target="_blank"
 								rel="noreferrer"
 								className="underline text-high"
 							>
 								terms
 							</a>{" "}
-							regarding any services herein.
+							regarding any services herein, and to how your data is handled — see{" "}
+							<a
+								href={PRIVACY_URL}
+								target="_blank"
+								rel="noreferrer"
+								className="underline text-high"
+							>
+								privacy
+							</a>.
 						</section>
 					</div>
 				</div>

@@ -1,6 +1,6 @@
 
 import { IonAvatar, IonButton, IonButtons, IonHeader, IonImg, IonMenuButton, IonSkeletonText, IonToolbar, useIonRouter, } from '@ionic/react';
-import logo from "@/Assets/Images/isolated logo.png";
+import logo from "@/Assets/Images/uj-mark.png";
 import { useGetProfileQuery } from '@/State/api/api';
 import { useAppSelector } from '@/State/store/hooks';
 import { selectActiveIdentity } from '@/State/identitiesRegistry/slice';

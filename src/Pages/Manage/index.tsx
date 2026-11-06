@@ -1,3 +1,4 @@
+import { SUPPORT_URL } from "../../constants"
 import React, { useMemo, useState } from "react";
 import * as Icons from "../../Assets/SvgIconLibrary";
 import { toast } from "react-toastify";
@@ -117,7 +118,7 @@ const Manage = () => {
 					channel.
 				</div>
 				<a
-					href="https://docs.shock.network/"
+					href={SUPPORT_URL}
 					target="_blank"
 					className="marked"
 					rel="noreferrer"
@@ -241,7 +242,7 @@ const Manage = () => {
 							<button
 								className="Sources_question_mark"
 								onClick={() =>
-									window.open("https://docs.shock.network/pub/intro", "_blank")
+									window.open(SUPPORT_URL, "_blank")
 								}
 							>
 								{Icons.questionMark()}

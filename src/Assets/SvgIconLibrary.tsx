@@ -62,7 +62,7 @@ z"/>
 export const logoDataUrl = `data:image/svg+xml;base64,${btoa(svgCode)}`;
 
 
-import IsolatedLogo from "../Assets/Images/isolated logo.png";
+import IsolatedLogo from "../Assets/Images/uj-mark.png";
 
 export const Logo = (width = 40) => {
     return <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
